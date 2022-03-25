@@ -13,7 +13,7 @@ export default function NasaEPIC(){
     useEffect(() => {
         fetchMetadata();
         async function fetchMetadata(){
-            const metaUrl = `https://epic.gsfc.nasa.gov/api/natural/date/${year}-${month}-${day}`;
+            const metaUrl = `https://api.nasa.gov/EPIC/api/natural/date/${year}-${month}-${day}?api_key=${apiKey}`;
             const res = await fetch(metaUrl);
             
             const data = await res.json();
